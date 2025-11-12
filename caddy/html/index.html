@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site Under Construction</title>
+  <meta name="description" content="We're building something awesome. Come back soon!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #0f1724;
+      --bg2: #0b1220;
+      --accent: #ffdd57;
+      --muted: #98a0b3;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(255,221,87,0.05), transparent 6%),
+                  linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:#e6eef8;
+      display:flex;align-items:center;justify-content:center;padding:32px;
+    }
+
+    .card{
+      width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);backdrop-filter: blur(6px);
+      border-radius:18px;padding:36px;display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:center;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+    }
+
+    @media (max-width:720px){
+      .card{grid-template-columns:1fr; text-align:center}
+    }
+
+    .graphic{
+      display:flex;flex-direction:column;align-items:center;gap:18px;padding:12px;
+    }
+    .logo{font-weight:800;font-size:20px;letter-spacing:-0.02em;color:var(--accent)}
+
+    .construction-illustration{width:220px;height:220px;display:grid;place-items:center}
+
+    .gear{width:84px;height:84px}
+    .gear svg{width:100%;height:100%}
+    .spin{animation:spin 6s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    h1{margin:0;font-size:28px}
+    p.lead{margin:8px 0 16px;color:var(--muted);line-height:1.45}
+
+    footer.small{font-size:12px;color:var(--muted);margin-top:18px}
+
+    .sparkle{position:relative}
+    .sparkle::after{content:'';position:absolute;right:-18px;top:-10px;width:8px;height:8px;border-radius:50%;background:linear-gradient(90deg,#fff, var(--accent));filter:blur(6px);opacity:0.9}
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <div class="graphic" aria-hidden="false">
+      <div class="logo">Drifting Cloud</div>
+
+      <div class="construction-illustration" aria-hidden="true">
+        <div class="gear spin" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(50,50)">
+              <g>
+                <circle r="20" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="6"></circle>
+                <g transform="rotate(0)">
+                  <path d="M-32-5 L-42-15 L-30-25 L-20-15 Z" fill="rgba(255,221,87,0.12)"></path>
+                </g>
+                <g>
+                  <path d="M-6-28 L6-28 L28-6 L28 6 L6 28 L-6 28 L-28 6 L-28 -6 Z" fill="rgba(255,221,87,0.18)"></path>
+                </g>
+                <circle r="8" fill="var(--accent)"></circle>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g>
+            <rect x="10" y="18" width="40" height="24" rx="4" fill="#ffcc66"></rect>
+            <rect x="60" y="26" width="72" height="16" rx="4" fill="#ffd" opacity="0.06"></rect>
+            <rect x="128" y="18" width="20" height="24" rx="4" fill="#ffcc66"></rect>
+          </g>
+        </svg>
+      </div>
+
+      <div class="sparkle" style="font-size:12px;color:var(--muted)">Building something great — stay tuned</div>
+    </div>
+
+    <section class="details" aria-labelledby="title">
+      <h1 id="title">We're working on it</h1>
+      <p class="lead">Thanks for stopping by — we're busy building a better experience. We'll be back soon with something you'll love.</p>
+
+      <footer class="small">© <span id="year"></span> Drifting Cloud — All rights reserved.</footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
