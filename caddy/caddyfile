@@ -1,0 +1,13 @@
+www.driftingcloud.me {
+	redir https://driftingcloud.me{uri} permanent
+}
+
+
+driftingcloud.me {
+	root * /usr/share/caddy
+	file_server
+	log {
+		output stdout 
+	}
+}
+
