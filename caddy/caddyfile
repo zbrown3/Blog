@@ -5,9 +5,12 @@ www.driftingcloud.me {
 
 driftingcloud.me {
 	root * /usr/share/caddy
+	try_files {path}.html
 	file_server
 	log {
 		output stdout 
 	}
+	
+	handle
 }
 

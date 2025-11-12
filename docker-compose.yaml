@@ -11,7 +11,7 @@ services:
       - ./caddy/caddy-config:/config
       - ./caddy/caddy-data:/data
       - ./caddy/caddyfile:/etc/caddy/Caddyfile
-      - ./caddy/html/index.html:/usr/share/caddy/index.html
+      - ./caddy/html:/usr/share/caddy
 
 volumes:
   caddy-config:
