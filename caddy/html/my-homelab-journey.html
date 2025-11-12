@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Drifting Cloud — Tech Blog</title>
-  <meta name="description" content="Drifting Cloud — A tech blog exploring homelabs, cloud computing, and self-hosted systems.">
+  <title>Welcome to Drifting Cloud: My Homelab Journey</title>
+  <meta name="description" content="A personal exploration of building a homelab and learning cloud computing.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -43,67 +43,48 @@
 
     header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 60px 20px 20px;
     }
     header h1 {
-      font-size: 42px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-size: 36px;
       color: var(--accent);
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      font-weight: 800;
     }
     header p {
       color: var(--muted);
-      font-size: 18px;
-      margin-top: 8px;
+      font-size: 16px;
     }
 
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 60px auto;
       padding: 0 20px;
-      display: grid;
-      gap: 30px;
-    }
-
-    .post {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 16px;
-      padding: 30px;
       box-shadow: 0 8px 30px rgba(2,6,23,0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
+      border: 1px solid rgba(255,255,255,0.05);
     }
-    .post:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+    article {
+      padding: 40px;
     }
-    .post h2 {
+    article h2 {
       color: var(--accent);
-      margin-bottom: 10px;
       font-size: 24px;
+      margin-bottom: 20px;
     }
-    .post p {
+    article p {
       color: var(--muted);
-      margin-bottom: 0;
-      line-height: 1.6;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 60px;
-    }
-    .nav a {
+    a.back {
+      display: inline-block;
       color: var(--accent);
       text-decoration: none;
+      margin: 20px;
       font-weight: 600;
-      transition: opacity 0.2s ease;
     }
-    .nav a:hover { opacity: 0.8; }
 
     footer {
       text-align: center;
@@ -114,22 +95,23 @@
   </style>
 </head>
 <body>
+  <a href="index.html" class="back">← Back to Home</a>
+
   <header>
-    <h1>☁️ Drifting Cloud</h1>
-    <p>Exploring homelabs, cloud computing, and the beauty of self-hosted tech.</p>
+    <h1>Welcome to Drifting Cloud</h1>
+    <p>Published: November 2025 • Tags: Homelab, Cloud, DevOps</p>
   </header>
 
   <main>
-    <a href="my-homelab-journey.html" class="post">
-      <h2>Welcome to Drifting Cloud: My Homelab Journey</h2>
-      <p>Join me as I build my own homelab from the ground up — experimenting with virtualization, automation, and cloud-native tools while learning how everything connects.</p>
-      <p><small>Published: November 2025 • Tags: Homelab, Cloud, DevOps</small></p>
-    </a>
-
-    <div class="nav">
-      <span></span>
-      <a href="my-homelab-journey.html">Next →</a>
-    </div>
+    <article>
+      <h2>My Homelab Journey Begins</h2>
+      <p>Welcome to <strong>Drifting Cloud</strong> — my space to document the lessons, wins, and occasional frustrations of setting up and maintaining my own homelab while diving deeper into the world of cloud computing.</p>
+      <p>It started with a simple goal: to better understand how the tools I use every day actually work under the hood. What began as a few old desktops running Linux soon became a sandbox for learning about virtualization, containers, networking, and cloud-native architectures.</p>
+      <p>Over time, this homelab evolved into a full-blown learning environment — complete with virtual machines, automation scripts, and experiments with technologies like <em>Podman</em>, <em>Kubernetes</em>, and <em>Infrastructure as Code</em>. Each project taught me something new about the systems that power modern computing.</p>
+      <p>Through this blog, I’ll share tutorials, configuration notes, and insights from real-world experience. My goal isn’t just to show what I’ve built, but to explain the “why” behind each decision — helping others build their own systems and confidence along the way.</p>
+      <p>Whether you’re new to homelabs or already running your own, I hope you find something here that sparks curiosity and helps you grow.</p>
+      <p><strong>— Ziare @ Drifting Cloud</strong></p>
+    </article>
   </main>
 
   <footer>
